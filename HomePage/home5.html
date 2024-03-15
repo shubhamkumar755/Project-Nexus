@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!-- scroll-behaviour:smooth; -->
+<!-- scroll-behaviour:smooth; -->
 
 <head>
     <meta charset="UTF-8">
@@ -14,8 +14,8 @@
         href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Wavefont:wght@4..1000&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
     <style>
         body {
@@ -23,7 +23,7 @@
             padding: 0;
             background-color: black;
             overflow-x: hidden;
-            scroll-behavior:smooth ;
+            scroll-behavior: smooth;
         }
 
         nav {
@@ -154,7 +154,7 @@
             display: inline-flex;
             font-size: 30px;
             padding-top: 60px;
-            height: 220px;
+            height: 240px;
         }
 
         #main {
@@ -163,7 +163,7 @@
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
             color: black;
-            font-size: 65px;
+            font-size: 70px;
 
         }
 
@@ -171,19 +171,49 @@
             font-family: sans-serif;
             color: transparent;
             padding-top: 15px;
-            font-size: 80px;
+            font-size: 90px;
             -webkit-text-stroke: 3px white;
 
         }
 
+         #quote{
+            position: relative;
+            top: 50%;  
+            width: 24em;
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 180%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);    
+        }
+
 
         #quote {
+
             font-family: 'Monospace', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             color: grey;
-            margin-top: 0px;
-            font-size: 30px;
+            margin-top: 30px;
+            font-size: 40px;
             /* -webkit-text-stroke: 1px grey; */
             margin-bottom: 4%;
+
+        }
+
+        #quote{
+            animation: typewriter 4s steps(50) 0s normal both,
+             blinkTextCursor 500ms steps(50) infinite normal;
+        }
+
+        @keyframes typewriter{
+        from{width: 0;}
+        to{width: 13em;}
+        }
+
+        @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent}
         }
 
         .btn {
@@ -271,16 +301,17 @@
             }
         }
 
-        .features{
-            animation: line;
+
+        .features {
             background-color: transparent;
             font-size: 20px;
-            width: 60%;
+            width: 65%;
             font-family: 'Monospace', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            border-radius: 20px ;
-
+            border-radius: 20px;
+            
             border: 2px solid grey;
             
+            animation: line;
             animation-name: features;
             animation-duration: 5s;
             animation-direction: forwards;
@@ -289,48 +320,75 @@
             color: white;
             text-align: center;
             cursor: pointer;
-            margin:13px;
+            margin: 13px;
             padding: 13px;
 
         }
-        .f1 {
+
+        .feat1 {
             margin-left: 10%;
             margin-top: 10%;
+            display: flex;
+            
         }
-        .f2{
-            position: absolute;
-            /* top: 30%; */
-            right: 6%;
+        
+        .feat1 img {
+            width: 10%;
+            height: 10%;
+            padding-left: 5%;
+            padding-top: 2%;
+
+        }
+
+
+        .feat2 {
+            /* position: absolute;
+            right: -20%;
+            top: 120%; */
+            display: flex;
             margin-top: 10%;
         }
-        #h1{
+
+        .feat2 img {
+            width: 10%;
+            height: 10%;
+            padding-left: 10%;
+            padding-top: 1.5%;
+            padding-right: 5%;
+        }
+
+        #h1 {
             font-size: 45px;
             /* margin-right: 300px; */
         }
-        #arr{
+
+        #arr {
             font-size: 40px;
             float: right;
             padding-left: px;
             opacity: 0;
         }
-        a{
+
+        a {
             text-decoration: none;
         }
-        .f1:hover{
+
+        .f1:hover {
             transition-duration: 0.25s;
-            -webkit-box-shadow:0px 0px 53px 0px steelblue;
+            -webkit-box-shadow: 0px 0px 53px 0px steelblue;
             -moz-box-shadow: 0px 0px 53px 0px steelblue;
             box-shadow: 0px 0px 25px 0px aqua;
             opacity: 1;
-            Transform:scale(1.009);
+            Transform: scale(1.009);
         }
-        .f2:hover{
+
+        .f2:hover {
             transition-duration: 0.25s;
-            -webkit-box-shadow:0px 0px 53px 0px steelblue;
+            -webkit-box-shadow: 0px 0px 53px 0px steelblue;
             -moz-box-shadow: 0px 0px 53px 0px steelblue;
             box-shadow: 0px 0px 25px 0px limegreen;
             opacity: 1;
-            Transform:scale(1.009);
+            Transform: scale(1.009);
         }
 
 
@@ -343,28 +401,15 @@
                 opacity: 1;
             }
         }
-
-        #search{
-            position: absolute;
-            right: 10%;
-            width: 10%;
-            top: 780px;
-        }
-        #connect{
-            width: 10%;
-            position: absolute;
-            left: 13%;
-            top:154%
-        }
-
-        @keyframes imgs{
-            from{
-                opacity: 0.1;
+        /* @features img{
+                        from {
+                opacity: 0;
             }
-            to{
+
+            to {
                 opacity: 1;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -403,22 +448,32 @@
 
     <div class="line"></div>
     <a href="#">
-    <div class="features f1">
-            <span id="h1">Lost & Found </span><span id="arr">&#x279C;</span></h1>
-            <!-- <div id="arr">&#x279C;</div> -->
-            <p>Nexus Lost & Found facilitates the seamless return of lost items to their owners within college campuses, fostering a
-            supportive community through acts of kindness and collaboration.</p>
-    </div></a>
-        <img id="search" src="search (1).png">
-        <img id="connect" src="distributed (1).png">
+        <div class="feat1">
+            <div class="features f1">
+                <span id="h1">Lost & Found </span><span id="arr">&#x279C;</span></h1>
+                <!-- <div id="arr">&#x279C;</div> -->
+                <p>Nexus Lost & Found facilitates the seamless return of lost items to their owners within college
+                    campuses,
+                    fostering a
+                    supportive community through acts of kindness and collaboration.</p>
+            </div>
+            <img src="search (1).png">
+        </div>
+    </a>
     <a href="#">
-    <div class="features f2">
-            <span id="h1">Skill Synergy Connect </span><span id="arr">&#x279C;</span></h1>
-            <!-- <div id="arr">&#x279C;</div> -->
-            <p>SkillSynergy Connect: Where individuals with complementary skills and shared interests converge, fostering
-            collaborations and meaningful connections.</p>
-    </div></a>
-    
+        <div class="feat2">
+            <img src="distributed (1).png">
+            <div class="features f2">
+                <span id="h1">Skill Synergy Connect </span><span id="arr">&#x279C;</span></h1>
+                <!-- <div id="arr">&#x279C;</div> -->
+                <p>SkillSynergy Connect: Where individuals with complementary skills and shared interests converge,
+                    fostering
+                    collaborations and meaningful connections.</p>
+            </div>
+
+        </div>
+    </a>
+
     <footer>
         <div id="e4"></div>
         <!-- <center>
