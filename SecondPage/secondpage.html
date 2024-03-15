@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- scroll-behaviour:smooth; -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ojuju:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rock+Salt&family=Wavefont:wght@4..1000&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        nav ul {
+            display: flex;
+            float: right;
+            padding: 20px;
+            padding-left: 700px;
+            position: absolute;
+            top: 0px;
+            right: 4%;
+        }
+
+        nav ul li {
+            float: right;
+            padding: 13px;
+        }
+
+        nav a {
+            text-decoration: none;
+            padding: 13px;
+            color: white;
+            font-family: Roboto;
+            font-size: 17px;
+        }
+
+
+        #top {
+            font-family: 'Rock Salt';
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            padding: 13px;
+            padding-left: 120px;
+        }
+
+        #e1 {
+            position: fixed;
+            top: 180px;
+            left: 33%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            /* background-color: aqua; */
+            opacity: 0.7;
+            background-image: linear-gradient(blue, limegreen);
+            filter: blur(150px);
+            /* animation: e1 10s ease 0s infinite, */
+            animation: e1ii 3s ease-in-out 0s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes e1 {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes e1ii {
+            from {
+                transform: scale(0.8)
+            }
+
+            to {
+                transform: scale(1);
+            }
+        }
+
+        #e2 {
+            position: fixed;
+            top: -400px;
+            left: -100px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            /* background-color: blue; */
+            background-image: linear-gradient(limegreen, aqua);
+            opacity: 0.4;
+            filter: blur(100px);
+            animation: e2 3s ease 0s infinite alternate;
+            z-index: -1;
+        }
+
+        @keyframes e2 {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0.8);
+            }
+        }
+
+
+        #e3 {
+            position: fixed;
+            top: 300px;
+            right: -400px;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            /* background-color: aqua; */
+            opacity: 0.4;
+            background-image: linear-gradient(steelblue, aqua);
+            filter: blur(100px);
+            animation: e3 3s ease 0s infinite alternate;
+        }
+
+        @keyframes e3 {
+            from {
+                transform: scale(1);
+            }
+
+            to {
+                transform: scale(0.8);
+            }
+
+        }
+
+        .main {
+            display: inline-flex;
+            font-size: 30px;
+            padding-top: 60px;
+            height: 220px;
+        }
+
+        #main {
+            font-family: Rock Salt;
+            background: linear-gradient(to right, steelblue, aqua, limegreen);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            color: black;
+            font-size: 65px;
+
+        }
+
+        #college {
+            font-family: sans-serif;
+            color: transparent;
+            padding-top: 0px;
+            font-size: 95px;
+            -webkit-text-stroke: 3px white;
+            padding-bottom: 5px;
+
+        }
+
+        #quote{
+            position: relative;
+            top: 50%;  
+            width: 24em;
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 180%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);    
+        }
+
+
+        #quote {
+
+            font-family: 'Monospace', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: grey;
+            margin-top: 40px;
+            font-size: 45px;
+            /* -webkit-text-stroke: 1px grey; */
+            margin-bottom: 4%;
+
+        }
+
+        #quote{
+            animation: typewriter 4s steps(50) 0s normal both,
+             blinkTextCursor 500ms steps(50) infinite normal;
+        }
+
+        @keyframes typewriter{
+        from{width: 0;}
+        to{width: 13em;}
+        }
+
+        @keyframes blinkTextCursor{
+        from{border-right-color: rgba(255,255,255,.75);}
+        to{border-right-color: transparent}
+        }
+
+        .btn {
+            border-radius: 80px;
+            width: 260px;
+            height: 80px;
+            font-size: 25px;
+            margin: 15px;
+            margin-bottom: 50px;
+            cursor: pointer;
+            transition: background-color 0.7s ease;
+        }
+
+        .login {
+            background-color: transparent;
+            border: none;
+            color: white;
+            border: 1px solid white;
+        }
+
+        .login:hover {
+            background-color: white;
+            border: 1px solid white;
+            color: steelblue;
+            opacity: 0.7;
+        }
+
+        .signup {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+
+        .signup:hover {
+            background-color: white;
+            border: none;
+            color: limegreen;
+            opacity: 0.7;
+        }
+
+
+
+
+        .logos {
+            padding-bottom: 13px;
+        }
+
+        .logos img {
+            padding: 13px;
+            width: 25px;
+        }
+
+        #e4 {
+            margin-top: 250px;
+            height: 10px;
+            width: 100%;
+            /* background-image: linear-gradient(180deg, aqua, limegreen); */
+            filter: blur(80px);
+        }
+
+
+        .line {
+            height: 500px;
+            width: 7px;
+            position: absolute;
+            top: 750px;
+            left: 4%;
+            background-image: linear-gradient(aqua, limegreen);
+            /* background-color: transparent; */
+            animation-name: line;
+            animation-duration: 30s;
+            animation-direction: forwards;
+            animation-timeline: scroll();
+            opacity: 0.5;
+            /* filter: blur(5px); */
+            z-index: -9px;
+
+        }
+
+        @keyframes line {
+            from {
+                transform: ScaleY(0);
+            }
+
+            to {
+                transform: ScaleY(2);
+            }
+        }
+
+        .features {
+            animation: line;
+            background-color: transparent;
+            font-size: 20px;
+            width: 65%;
+            font-family: 'Monospace', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            border-radius: 20px;
+
+            border: 2px solid grey;
+
+            animation-name: features;
+            animation-duration: 5s;
+            animation-direction: forwards;
+            /* animation-iteration-count: infinite; */
+            animation-timeline: scroll(block nearest);
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            margin: 13px;
+            padding: 13px;
+
+        }
+
+        .feat1 {
+            margin-left: 10%;
+            margin-top: 10%;
+            display: flex;
+
+
+        }
+
+        .feat1 img {
+            width: 10%;
+            height: 10%;
+            padding-left: 5%;
+            padding-top: 2%;
+
+            /* animation: line; */
+            animation-name: imgs;
+            animation-duration: 5s;
+            animation-direction: forwards;
+            /* animation-iteration-count: infinite; */
+            animation-timeline: scroll();
+        }
+
+
+        .feat2 {
+            /* position: absolute;
+            right: -20%;
+            top: 120%; */
+            display: flex;
+            margin-top: 10%;
+        }
+
+        .feat2 img {
+            width: 10%;
+            height: 10%;
+            padding-left: 10%;
+            padding-top: 1.5%;
+            padding-right: 5%;
+
+            animation-name: imgs;
+            animation-duration: 5s;
+            animation-direction: forwards;
+            /* animation-iteration-count: infinite; */
+            animation-timeline: scroll();
+        }
+
+
+
+
+
+        #h1 {
+            font-size: 45px;
+            /* margin-right: 300px; */
+        }
+
+        #arr {
+            font-size: 40px;
+            float: right;
+            padding-left: px;
+            opacity: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .f1:hover {
+            transition-duration: 0.25s;
+            -webkit-box-shadow: 0px 0px 53px 0px steelblue;
+            -moz-box-shadow: 0px 0px 53px 0px steelblue;
+            box-shadow: 0px 0px 25px 0px aqua;
+            opacity: 1;
+            Transform: scale(1.009);
+        }
+
+        .f2:hover {
+            transition-duration: 0.25s;
+            -webkit-box-shadow: 0px 0px 53px 0px steelblue;
+            -moz-box-shadow: 0px 0px 53px 0px steelblue;
+            box-shadow: 0px 0px 25px 0px limegreen;
+            opacity: 1;
+            Transform: scale(1.009);
+        }
+
+
+        @keyframes features {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes imgs {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="name">
+            <h1 id="top">NEXUS</h1>
+        </div>
+        <ul type="none">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Login</a></li>
+            <li><a href="#">Signup</a></li>
+            <li><a href="#">More..</a></li>
+        </ul>
+    </nav>
+
+    <div id="e1"></div>
+
+    <div id="e2"></div>
+    <div id="e3"></div>
+    <center>
+        <div class="center">
+            <div class="main">
+                <h1 id="main">NEXUS&nbsp;</h1>
+                <div id="cbox">
+                    <h1 id="college">VIT</h1>
+                </div><br>
+            </div>
+            <h2 id="quote">Connect. Discover. Thrive.</h2>
+            <!-- <div class="btns">
+                <button class="btn login">Login</button>
+                <button class="btn signup">Signup</button>
+            </div> -->
+        </div>
+    </center>
+
+
+    <div class="line"></div>
+    <a href="#">
+        <div class="feat1">
+            <div class="features f1">
+                <span id="h1">Lost & Found </span><span id="arr">&#x279C;</span></h1>
+                <!-- <div id="arr">&#x279C;</div> -->
+                <p>Nexus Lost & Found facilitates the seamless return of lost items to their owners within college
+                    campuses,
+                    fostering a
+                    supportive community through acts of kindness and collaboration.</p>
+            </div>
+            <img src="search (1).png">
+        </div>
+    </a>
+    <a href="#">
+        <div class="feat2">
+            <img src="distributed (1).png">
+            <div class="features f2">
+                <span id="h1">Skill Synergy Connect </span><span id="arr">&#x279C;</span></h1>
+                <!-- <div id="arr">&#x279C;</div> -->
+                <p>SkillSynergy Connect: Where individuals with complementary skills and shared interests converge,
+                    fostering
+                    collaborations and meaningful connections.</p>
+            </div>
+
+        </div>
+    </a>
+
+    <footer>
+        <div id="e4"></div>
+        <!-- <center>
+            <div class="logos">
+                <img src="x-social-media-white-icon.png">
+                <img src="instagram-white-icon.png">
+                <img src="pngegg.png">
+                <img src="facebook-app-round-white-icon.png">
+            </div>
+        </center> -->
+    </footer>
+
+</body>
+
+</html>
